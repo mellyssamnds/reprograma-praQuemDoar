@@ -14,24 +14,26 @@ A existência de bons projetos sociais traz esperança para as pessoas beneficia
 
 É claro que o viés filantrópico não é tudo. Além de dar a mão a quem precisa, os projetos são responsáveis por gerar empregos e movimentar o mercado. Segundo o **[Mapa das Organizações da Sociedade Civil](https://mapaosc.ipea.gov.br/indicadores)**, do IPEA, são mais de 820 mil Organizações da Sociedade Civil no Brasil, gerando 2,9 milhões de empregos formais. Essa é mais uma evidência da força de um setor que vem conduzindo nos últimos anos uma revolução silenciosa, amparando, dando oportunidades e abraçando os mais carentes.
 
-## 🛠️Tecnologias utilizadas:
+## Tecnologias utilizadas
 
-| Ferramenta       | Descrição                                                                                               |
-| ---------------- | ------------------------------------------------------------------------------------------------------- |
-| `javascript`     | Linguagem de programação                                                                                |
-| `nodejs`         | Ambiente de execução do JavaScript                                                                      |
-| `express`        | Framework NodeJS                                                                                        |
-| `dotenv`         | Dependência para proteger dados sensíveis do projeto                                                    |
-| `mongoose`       | Dependência que interage com o MongoDB para a conexão da database, criação do model e das collections   |
-| `nodemon`        | Dependência que observa as atualizações realizadas nos documentos para rodar o servidor automaticamente |
-| `npm`            | Gerenciador de pacotes                                                                                  |
-| `MongoDB`        | Banco de dado não relacional orietado a documentos                                                      |
-| `Mongo Atlas`    | Interface gráfica para verificar se os dados foram persistidos                                          |
-| `Thunder Client` | Interface gráfica para realizar os testes                                                               |
+| Ferramenta       | Descrição                                                                                                                |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| `javascript`     | Linguagem de programação                                                                                                 |
+| `nodejs`         | Ambiente de execução do JavaScript                                                                                       |
+| `express`        | Framework NodeJS                                                                                                         |
+| `dotenv`         | Dependência para proteger dados sensíveis do projeto                                                                     |
+| `mongoose`       | Dependência que interage com o MongoDB para a conexão da database, criação do model e das collections                    |
+| `nodemon`        | Dependência que observa as atualizações realizadas nos documentos para rodar o servidor automaticamente                  |
+| `npm`            | Gerenciador de pacotes                                                                                                   |
+| `MongoDB`        | Banco de dado não relacional orietado a documentos                                                                       |
+| `Mongo Atlas`    | Interface gráfica para verificar se os dados foram persistidos                                                           |
+| `Thunder Client` | Interface gráfica para realizar os testes                                                                                |
+| `swagger`        | Framework para gerar a documentação do projeto, auxiliando na descrição, consumo e visualização dos endpoints de uma API |
+| `Render`         | Plataforma utilizada para deployar aplicações backend                                                                    |
 
 <br>
 
-## 🗂️ Arquitetura
+## Arquitetura
 
 ```
   📁 reprograma-praQuemDoar
@@ -60,8 +62,27 @@ A existência de bons projetos sociais traz esperança para as pessoas beneficia
 ```
 
 <br>
+## Executando o Projeto
 
-## 🌐Dados para Collection Institutions
+```bash
+# Clone o repositório
+$ git clone https://github.com/mellyssaStephanny/reprograma-praQuemDoar.git
+
+# Entre na pasta do projeto
+$ cd reprograma-praQuemDoar
+
+# Crie uma variável de ambiente e use o `.env.example` como modelo de preenchimento
+$ touch .env
+
+# Instale as dependências
+$ npm install
+$ npm install dotenv --save
+
+# Execute o servidor
+$ npm start
+```
+
+## Dados para Collection Institutions
 
 - **\_id**: autogerado e obrigatório
 - **institutionName**: texto e obrigatório (_único_)
@@ -74,7 +95,7 @@ A existência de bons projetos sociais traz esperança para as pessoas beneficia
 
  <br>
 
-## 🌐 Dados para Collection Donors
+## Dados para Collection Donors
 
 - **\_id**: autogerado e obrigatório
 - **donorName**: texto e obrigatório (_único_)
@@ -86,4 +107,34 @@ A existência de bons projetos sociais traz esperança para as pessoas beneficia
 
 ## Rotas
 
+- ## Institution
+
+- **GET**/reprograma-praquemdoar/institution/all
+  - lista todas as Instituições cadastradas
+- **GET**/reprograma-praquemdoar/institution/:id
+  - listar a Instituição por id
+- **PATCH**/reprograma-praquemdoar/institution/:id
+  - atualiza uma Instituição por id
+- **DELETE**/reprograma-praquemdoar/institution/:id
+  - apagar uma Instituição cadastrada
+- **POST**/reprograma-praquemdoar/institution/:id
+
+  - cadastra uma Instituição na base de dados
+
+- ## Donor
+
+- **GET**/reprograma-praquemdoar/donor/all
+  - lista todas os Doadores cadastrados
+- **GET**/reprograma-praquemdoar/donor/:id
+  - listar o Doador por id
+- **PATCH**/reprograma-praquemdoar/donor/:id
+  - atualiza um Doador por id
+- **DELETE**/reprograma-praquemdoar/donor/:id
+  - apagar um Doador cadastrado
+- **POST**/reprograma-praquemdoar/donor/:id
+  - cadastra um Doador na base de dados
+
 ## Documentação
+
+[Swagger](https://praquemdoar.onrender.com/documentacao)
+[Render](https://praquemdoar.onrender.com)
