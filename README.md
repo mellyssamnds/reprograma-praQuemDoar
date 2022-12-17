@@ -71,7 +71,6 @@ A existência de bons projetos sociais traz esperança para as pessoas beneficia
 - **pix**: number e obrigatório
 - **phoneNumber**: number e obrigatório
 - **email**: texto e obrigatório
-- **instagramOrSite**: texto e obrigatório
 
  <br>
 
@@ -83,6 +82,7 @@ A existência de bons projetos sociais traz esperança para as pessoas beneficia
 - **phoneNumber**: number e obrigatório
 - **cpf**: number e obrigatório
 - **donationAmount**: number e obrigatório
+- **donationInstitution**: texto e obrigatório
 
 ## Rotas
 
