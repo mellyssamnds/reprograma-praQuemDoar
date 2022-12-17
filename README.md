@@ -37,11 +37,11 @@ A existência de bons projetos sociais traz esperança para as pessoas beneficia
   📁 reprograma-praQuemDoar
   |
   |-  📁 src
-  |    |- 📁 database
-  |         |- 📄 mongooseConnect.js
   |    |- 📁 controllers
   |         |- 📄 donnorController.js
   |         |- 📄 institutionController.js
+  |    |- 📁 database
+  |         |- 📄 mongooseConnect.js
   |    |- 📁 models
   |         |- 📄 donorModel.js
   |         |- 📄 institutionModel.js
