@@ -1,11 +1,11 @@
-const controller = require('../controllers/institutionController')
+const controller = require('../controllers/donorController')
 const express = require('express')
 const router = express.Router()
 
-router.get('/all', controller.findAllInstitutions)
-router.get('/:id', controller.findInstitutionById)
-router.post('/add', controller.addNewInstitution)
-router.patch('/:id', controller.updateInstitution)
-router.delete('/:id', controller.deleteInstitution)
+router.get('/all', controller.findAllDonors)
+router.get('/:id', controller.findDonorById)
+router.post('/add', controller.addNewDonor)
+router.patch('/:id', controller.updateDonor)
+router.delete('/:id', controller.deleteDonor)
 
 module.exports = router

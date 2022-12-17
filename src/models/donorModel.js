@@ -31,6 +31,10 @@ const donorSchema = new mongoose.Schema(
     donationAmount: {
       type: Number,
       required: true
+    },
+    donationInstitution: {
+      type: String,
+      required: true
     }
   },
   {

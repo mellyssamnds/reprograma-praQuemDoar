@@ -32,7 +32,6 @@ const addNewInstitution = async (req, res) => {
       phoneNumber,
       email
     } = req.body
-    console.log(req.body)
 
     const newInstitution = new institutionModel({
       institutionName,
@@ -43,7 +42,6 @@ const addNewInstitution = async (req, res) => {
       phoneNumber,
       email
     })
-    console.log(newInstitution)
 
     const institutionExists = await institutionModel.findOne({
       institutionName: institutionName
